@@ -1104,6 +1104,7 @@
 .section-03 {
   background: #192551;
   padding: 17.5rem 0;
+  padding-top: 9.375rem;
   position: relative;
   /* scroller css */
 }
@@ -1149,7 +1150,6 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 17.5rem;
 }
 @media all and (max-width: 1400px) {
   .section-03 .Countbx {
@@ -1163,8 +1163,15 @@
   }
 }
 .section-03 .Countbx--list {
-  flex: 1 0 25%;
-  max-width: 25%;
+  flex: 1 0 50%;
+  max-width: 50%;
+  opacity: 0;
+}
+.section-03 .Countbx--list:nth-of-type(odd) {
+  margin-top: 10rem;
+}
+.section-03 .Countbx--list:nth-of-type(even) {
+  margin-top: 12rem;
 }
 @media all and (max-width: 1400px) {
   .section-03 .Countbx--list {

@@ -810,6 +810,7 @@
 .section-03 {
 	background: $color-1;
 	padding: rem(280) 0;
+	padding-top: rem(150);
 	position: relative;
 	@include mdq-max(lg) {
 		padding: rem(100) 0;
@@ -854,7 +855,7 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		padding-bottom: rem(280);
+
 		@include mdq-max(xxl) {
 			margin-right: rem(-5);
 			margin-left: rem(-5);
@@ -863,8 +864,15 @@
 			padding-bottom: rem(50);
 		}
 		&--list {
-			flex: 1 0 25%;
-			max-width: 25%;
+			flex: 1 0 50%;
+			max-width: 50%;
+			opacity: 0;
+			&:nth-of-type(odd) {
+				margin-top: 10rem;
+			}
+			&:nth-of-type(even) {
+				margin-top: 12rem;
+			}
 			@include mdq-max(xxl) {
 				flex: 1 0 50%;
 				max-width: 50%;

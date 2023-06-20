@@ -3,10 +3,10 @@
 $mc: $color-1;
 $mc2: $color-2;
 
-$input-height: rem(54);
+$input-height: rem(52);
 $input-height-lg: $input-height;
-$input-border: #ddd;
-$input-border-active-width: 3px;
+$input-border: $color-1;
+$input-border-active-width: 2px;
 
 @import 'utilities'; // 유틸리티 ( mt_5, mt_10, ... )
 @import 'buttons'; // 버튼 ( btn-type-01, btn-type02, ... )

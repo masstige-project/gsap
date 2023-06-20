@@ -6,14 +6,18 @@
 [class*=' btn-border-'],
 [class^='btn-border-'] {
 	border: 0;
-	min-width: em(100);
+	min-width: em(160);
 	align-items: center;
 	justify-content: center;
 	display: inline-flex;
-	font-size: rem(17);
+	font-size: rem(20);
 	padding: 0 rem(15);
 	vertical-align: middle;
 	transition: 0.3s;
+
+	@include mdq-max(lg) {
+		font-size: rem(18);
+	}
 
 	&.__small {
 		font-size: rem(14);
@@ -98,13 +102,14 @@
 }
 
 .board_view_btn_box {
-	margin: 40px auto;
+	margin: 40px auto rem(100);
 
 	@include mdq-max(lg) {
 		position: relative;
+		margin: 40px auto rem(60);
 
 		a {
-			width: 60px;
+			width: 80px;
 			padding-left: 0;
 			padding-right: 0;
 			min-width: auto;

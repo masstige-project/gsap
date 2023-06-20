@@ -3,8 +3,8 @@
 // HEADER
 .header .nav {
 	text-align: center;
+	display: none;
 	@include mdq-max(lg) {
-		display: none;
 	}
 	.nav-list--depth1 {
 		align-items: center;
@@ -131,10 +131,11 @@
 }
 
 // ASIDE
-$nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
+$nav-mobile-direction: left; //네비버튼 위치 , 네비 나오는 방향
 .nav-mobile {
+	padding: 0 rem(60);
 	z-index: 700;
-	background-color: #fff;
+	background-color: $color-1;
 	max-width: 600px;
 	width: 100%;
 	height: 100%;
@@ -143,24 +144,26 @@ $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
 	position: fixed;
 	top: 0;
 	#{$nav-mobile-direction}: -100%;
+	display: block;
 	@include mdq-max(lg) {
-		display: block;
+		padding: 0 rem(20);
 	}
 	&.active {
 		#{$nav-mobile-direction}: 0;
 	}
 	&__btn {
 		#{$nav-mobile-direction}: 0;
-		top: 0;
-		position: absolute;
-		text-align: center;
-		height: $nav-height-lg;
-		width: $nav-height-lg;
+		// top: 0;
+		// position: absolute;
+		// text-align: center;
+		height: rem(46);
+		width: rem(46);
 		color: #222;
 		font-size: rem(32);
-		display: none;
-		@include mdq-max(lg) {
-			display: block;
+		display: block;
+		@include mdq-max(md) {
+			height: rem(36);
+			width: rem(36);
 		}
 	}
 	&__bg {
@@ -171,46 +174,75 @@ $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
 		left: 0;
 		right: 0;
 		min-height: 100%;
-		background: rgba(#000, 0.5);
+		background: rgba(#000, 0.8);
 		z-index: 600;
 	}
 
 	&__head {
-		height: $nav-height-lg;
 		position: relative;
-		border-bottom: 1px solid #ddd;
 
 		.logo {
-			padding: 0 rem(20);
 			img {
-				width: rem(150);
+				width: rem(152);
+				@include mdq-max(md) {
+					width: rem(138);
+				}
 			}
 		}
 
 		.logo-bx {
 			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			height: 100%;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding-top: rem(60);
+		}
+		@include mdq-max(lg) {
+			.logo-bx {
+				padding-top: rem(40);
+			}
 		}
 	}
 	&__body {
-		padding-bottom: 50px; //모바일 브라우저 스크롤 여백
+		padding-top: rem(90);
+
 		height: 100%;
 		position: relative;
 		overflow-y: auto;
-		height: calc(100vh - #{$nav-height-lg});
+		height: calc(100vh - 106px);
+		@include mdq-max(lg) {
+			padding-top: rem(30);
+			height: calc(100vh - 62px);
+		}
+
+		.footer {
+			padding: rem(35) 0;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+
+			.container {
+				padding: 0;
+			}
+
+			&__logo {
+				display: none;
+			}
+			.privarybx {
+				display: none !important;
+			}
+		}
 	}
 
 	.depth-1 {
 		> .link {
 			text-align: left;
-			color: #000;
-			border-bottom: 1px solid #ddd;
+			color: #fff;
 			display: block;
-			padding: 1rem 1rem;
-			font-size: 1.2rem;
+			padding: 1.1rem 0;
+			font-size: rem(24);
 			position: relative;
+			font-weight: 500;
+
 			&.active {
 				background-color: $color-1;
 				color: #fff;

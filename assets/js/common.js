@@ -367,12 +367,23 @@ var magnificPop = {
   },
 };
 
+function headerScrolled() {
+  if ( $(window).scrollTop() > 0 ) {
+    $('.header').addClass('scrolled');
+
+  } else {
+    $('.header').removeClass('scrolled');
+
+  }
+}
+
 function closePopup() {
   $.magnificPopup.close();
 }
 
 $(window).on('scroll', function () {
   subNavScroll.init();
+  headerScrolled();
 });
 
 $(window).on('resize', function () {
@@ -419,7 +430,7 @@ $(document).ready(function () {
   });
   */
 
-     /**
+    /**
  * qna
  * 아코디언
  */
@@ -434,7 +445,6 @@ $(document).ready(function () {
       body = qna.find(".qna-body"),
       faq_chk = "";
     body.hide();
-
 
     $(document).on("click",".qna-header", function (event) {
       event.preventDefault();
@@ -451,6 +461,7 @@ $(document).ready(function () {
     });
   },
 };
+
   
   $(window).scrollTrack({
     threshold: 0, 
@@ -630,7 +641,4 @@ AOS.init({
   once: true,
 });    
 
-// 전화번호 하이픈 자동생성
-$(document).on("input", ".AutoHyphen", function() { 
-  $(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") );
-});
+

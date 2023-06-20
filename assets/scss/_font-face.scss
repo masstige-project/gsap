@@ -190,3 +190,29 @@
 	font-weight: 900;
 	src: local('SUIT'), url('../fonts/SUIT-Heavy.woff2') format('woff2');
 }
+
+// gmarket 폰트
+@font-face {
+	font-family: 'GmarketSans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('GmarketSans'), url('../fonts/GmarketSansBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'GmarketSans';
+	font-style: normal;
+	font-weight: 500;
+	src: local('GmarketSans'), url('../fonts/GmarketSansMedium.woff') format('woff');
+}
+@font-face {
+	font-family: 'GmarketSans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('GmarketSans'), url('../fonts/GmarketSansLight.woff') format('woff');
+}
+@font-face {
+	font-family: 'AbrilFatface';
+	font-style: normal;
+	font-weight: 400;
+	src: local('AbrilFatface'), url('../fonts/AbrilFatface-Regular.woff') format('woff');
+}

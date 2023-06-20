@@ -6,8 +6,9 @@
 
 <header id="header" class="header">
 	<div class="container header-wrap">
-		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
-			<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+
+		<a href="../main/main.html" class="logo d-inline-flex align-items-center " title="메인으로">
+			<img src="../assets/images/main/logo.png" class="logo-c" alt="<?=$SS[sitename]?>" />
 		</a>
 		<div class="nav__bg"></div>
 		<!-- S : navigation -->
@@ -15,15 +16,10 @@
 			<? include "../include/nav.html" ?>
 		</nav>
 		<!-- E : navigation -->
-		<button class="nav-mobile__btn" type="button">
-			<i class="xi-bars"></i>
-		</button>
+
 	</div>
 </header>
 
-<!-- S : mobile navigation -->
-<? include "../include/aside.html" ?>
-<!-- E : mobile navigation -->
 
 <!-- S : loading image -->
 <div class="loading-image">

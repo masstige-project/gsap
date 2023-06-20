@@ -4,44 +4,35 @@
 			<div class="footer__logo">
 				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
 			</div>
-			<div class="footer__info">
-				<ul class="d-flex align-items-center mt-6 mx-n2">
-					<li class="px-2"><a href="../policy/privacy.html" class="link font-weight-medium">개인정보처리방침</a></li>
-					<li class="px-2"><a href="../policy/email-security.html" class="link">이메일무단수집거부</a></li>
-				</ul>
 
-				<div class="footer__txt mt-6">
+
+			<div class="footer__info">
+
+				<div class="footer__txt">
 					<p class="txt">
-						<span>TEL :
-							<?=$SS[sitetel]?>
-						</span>
-						<span>이메일 :
-							<?=$SS[siteemail]?>
-						</span>
-						<span>사업자번호 :
-							<?=$SS[sitecompanyno]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle1]?> :
-							<?=$SS[AddValue1]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle2]?> :
-							<?=$SS[AddValue2]?>
+						<span class="common-text--15 font-weight-medium">
+							<?=$SS[sitename]?>
 						</span>
 					</p>
-					<p class="txt">
+					<ul class="d-flex align-items-center  mt-3 mt-lg-0  privarybx">
+						<li class="px-2"><a href="../pop/privary-popup.html" class="link popup-link font-weight-medium">개인정보처리방침</a>
+						</li>
+						<li class="px-2"><a href="../pop/email-popup.html" class="link popup-link font-weight-medium">이메일무단수집거부</a>
+						</li>
+					</ul>
+					<p class="txt pt-2 pt-lg-3">
 						<span>
-							<?=$SS[AddTitle3]?> :
-							<?=$SS[AddValue3]?>
+							<?=$SS[siteaddr]?>
+						</span>
+					</p>
+					<p class="txt pt-2">
+						<span>
+							TEL :
+							<?=$SS[sitetel]?>
 						</span>
 						<span>
-							<?=$SS[AddTitle4]?> :
-							<?=$SS[AddValue4]?>
-						</span>
-						<span>
-							<?=$SS[AddTitle5]?> :
-							<?=$SS[AddValue5]?>
+							사업자등록번호 :
+							<?=$SS[sitecompanyno]?>
 						</span>
 					</p>
 				</div>

@@ -1,146 +1,468 @@
 <? include "../include/head.html" ?>
 <!DOCTYPE html>
 <html lang="<?=$P_lang?>">
-	<head>
-		<?
+
+<head>
+	<?
     $P_dp0 = 'main';
     include "../include/meta.html" 
     ?>
-		<link rel="stylesheet" href="../assets/css/main.min.css" />
-	</head>
-	<body class="main-body">
-		<? include "../include/header.html" ?>
+	<link rel="stylesheet" href="../assets/css/main.min.css" />
+</head>
 
-		<main class="main" id="contents">
-			<!-- S : main-visual -->
-			<section class="main-visual">
-				<h1 class="sr-only">메인비주얼 영역</h1>
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<!-- 
-              pc: 1920x800
-              m: 1440x1200 
+<body class="main-body" style="overflow-x: hidden;">
+	<? include "../include/header.html" ?>
+
+	<main class="main" id="contents">
+		<!-- S : main-visual -->
+		<section class="main-visual fixani-section" id="mainvisual">
+			<h1 class="sr-only">메인비주얼 영역</h1>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!-- 
+              pc: 1920x840
+              m: 1440x2576 
             -->
-						<div class="swiper-slide item">
-							<a href="#" class="link">
-								<div class="img-bx">
-									<img class="d-none d-md-block" src="//via.placeholder.com/1920x800/" alt="" />
-									<img class="d-block d-md-none" src="//via.placeholder.com/1440x1200/" alt="" />
+					<div class="swiper-slide item">
+						<a href="#" class="link">
+							<div class="img-bx">
+								<img class="d-none d-md-block" src="../assets/images/main/visual1.jpg" alt="img" />
+								<img class="d-block d-md-none" src="../assets/images/main/visual1-m.jpg" alt="img" />
+							</div>
+							<div class="txt-bx">
+								<div class="container">
+									<h2 class="title d-block" style="opacity: 1;">GSAP용 공유</h2>
+									<p class="text d-block" style="opacity: 1;">GSAP 및 애니메이션 공유용 템플릿입니다.</p>
 								</div>
-								<div class="txt-bx">
-									<div class="container">
-										<h2 class="title">타이틀입니다.</h2>
-										<p class="text">텍스트입니다.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide item">
-							<a href="#" class="link">
-								<div class="img-bx">
-									<img class="d-none d-md-block" src="//via.placeholder.com/1920x800/" alt="" />
-									<img class="d-block d-md-none" src="//via.placeholder.com/1440x1200/" alt="" />
-								</div>
-								<div class="txt-bx">
-									<div class="container">
-										<h2 class="title">타이틀입니다.</h2>
-										<p class="text">텍스트입니다.</p>
-									</div>
-								</div>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
+				</div>
+			</div>
 
-					<!--
-            TODO: 퍼블 작업 시 가이드
-            TODO: .swiper-control 엘리먼트에 각각 추가 클래스 부여하여 스타일 변경.
-            TODO: .swiper-control 만 선언 시 기본 형태 유지
-            TODO: .swiper-control--progress = 기본 프로그레스 바 형태 ( * scss만 변경 )
-            TODO: .swiper-control--progress-no = 숫자 포함 프로그레스 바 ( * script 커스텀 필요 )
-          -->
-					<div class="swiper-control">
-						<div class="container">
-							<!-- S : Swiper Pagination -->
-							<div class="swiper-pagination"></div>
-							<!-- E : Swiper Pagination -->
-
-							<!--
-              TODO: 재생버튼 필요 시에만 주석 해제
-              <div class="swiper-play on">
-                <i class="xi-play"></i>
-                <i class="xi-pause"></i>
-              </div>
-              -->
-
-							<!--
-                S : Swiper Navigation
-                TODO: 기본 형태 외 다른 형태 사용 시 .swiper-control에 absolute가 적용되기 때문에 위치 커스텀 필요.
-              -->
-							<button type="button" class="swiper-button swiper-button--prev">
-								<i class="xi-angle-left"></i>
-							</button>
-							<button type="button" class="swiper-button swiper-button--next">
-								<i class="xi-angle-right"></i>
-							</button>
-							<!-- E : Swiper Navigation -->
+			<!-- S : scroll -->
+			<div class="scrollWrap">
+				<div class="inner">
+					<div class="box box--top">SCROLL DOWN</div>
+					<div class="box box--bottom">
+						<div class="scroll-downs">
+							<div class="mousey">
+								<div class="scroller"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- E : main-visual -->
+			</div>
+			<!-- E : scroll -->
+		</section>
+		<!-- E : main-visual -->
 
-			<!-- S : section -->
-			<section class="section">
-				<div class="container"></div>
-			</section>
-			<!-- E : section -->
-		</main>
+		<!-- S : section -->
+		<section class="section section-01 py-25">
+			<div class="border-bottom"></div>
+			<div class="container">
+				<div class="titlebx">
+					<p class="text pb-5"> 오른쪽에서 왼쪽으로 나오는 GSAP입니다. </p>
+					<p class="text"> .section-01 클래스 사용 </p>
+				</div>
 
-		<? include "../include/footer.html" ?>
-		<? include "../include/js.html" ?>
-		<script>
-			var visualSwiper = new Swiper('.main-visual .swiper-container', {
-				loop: true,
-				effect: 'fade',
-				fadeEffect: {
-					crossFade: true,
-				},
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
-				autoHeight: true,
-				pagination: {
-					el: '.main-visual .swiper-pagination',
-					type: 'bullets',
-					clickable: true,
-					/*
-          TODO: .swiper-control--progress-no 적용 시에만 주석 해제
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
-          },
-          */
-				},
-				navigation: {
-					nextEl: '.main-visual .swiper-button--next',
-					prevEl: '.main-visual .swiper-button--prev',
-				},
-			});
+				<div class="icnWrap">
 
-			/*
-      TODO: 재생버튼 필요 시에만 주석 해제
-      $('.main-visual .swiper-play').on('click', function () {
-        if ($(this).hasClass('on')) {
-          $(this).removeClass('on');
-          mvSwiper.autoplay.stop();
-        } else {
-          $(this).addClass('on');
-          mvSwiper.autoplay.start();
-        }
-      });
-      */
+					<div class="FlxWrap">
+						<ul class="icnbx wowrap">
+							<li class="icnbx--list pb-com wow fadeInLeft">
+								<div class="inner">
+									<img src="../assets/images/main/section1-icon1.png" alt="icn">
+								</div>
+							</li>
+							<li class="icnbx--list pb-com wow fadeInLeft">
+								<div class="inner">
+									<img src="../assets/images/main/section1-icon2.png" alt="icn">
+								</div>
+							</li>
+							<li class="icnbx--list wow fadeInLeft">
+								<div class="inner">
+									<img src="../assets/images/main/section1-icon3.png" alt="icn">
+								</div>
+							</li>
+							<li class="icnbx--list pb-com wow fadeInLeft">
+								<div class="inner">
+									<img src="../assets/images/main/section1-icon4.png" alt="icn">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E : section -->
+
+		<!-- S : section -->
+		<section class="section section-02">
+			<div class="container">
+				<!-- card -->
+				<div class="CardWrap">
+					<div class="inner">
+						<div class="inner--left" data-aos="fade-down">
+							<div class="box">
+								<p class="Top">
+									왼쪽에서 오른쪽으로<br>
+									나오는 GSAP 입니다.
+								</p>
+							</div>
+						</div>
+						<div class="inner--right" data-aos="fade-up">
+							<ul class="cardbx">
+								<li class="cardbx--list">
+									<a href="../comein/comein.html" class="link">
+										<div class="box">
+											<p class="Tit">제목</p>
+										</div>
+										<div class="img-bx">
+											<img src="../assets/images/main/logo-2.png" alt="logo">
+											<p class="title">왼->오 GSAP</p>
+										</div>
+									</a>
+								</li>
+								<li class="cardbx--list">
+									<a href="../show/show.html" class="link">
+										<div class="box">
+											<p class="Tit">제목</p>
+										</div>
+										<div class="img-bx">
+											<img src="../assets/images/main/logo-2.png" alt="logo">
+											<p class="title">왼->오 GSAP</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="MarketingWrap">
+					<div class="Mktbx">
+						<div class="Mktbx--left">
+							<div class="category-bx">
+								<div class="cate cate--1 ">
+									<div class="d-flex align-items-center justify-content-center">
+										<img src="../assets/images/main/cateicn-1.png" alt="icn">
+										<a href="">
+											인스타그램
+										</a>
+									</div>
+								</div>
+								<div class="cate cate--2 ">
+									<div class=" d-flex align-items-center justify-content-center">
+										<img src="../assets/images/main/cateicn-2.png" alt="icn">
+										<a href="">
+											유튜브
+										</a>
+									</div>
+								</div>
+								<div class="cate cate--3 ">
+									<div class="d-flex align-items-center justify-content-center">
+										<img src="../assets/images/main/cateicn-3.png" alt="icn">
+										<a href="">
+											플레이스
+										</a>
+									</div>
+								</div>
+								<div class="cate cate--4 ">
+									<div class="d-flex align-items-center justify-content-center">
+										<img src="../assets/images/main/cateicn-4.png" alt="icn">
+										<a href="">
+											블로그
+										</a>
+									</div>
+								</div>
+								<div class="cate cate--5 ">
+									<div class="d-flex align-items-center justify-content-center">
+										<img src="../assets/images/main/cateicn-5.png" alt="icn">
+										<a href="" class="pt-2">
+											페이스북
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Mktbx--right wow fadeInRight" data-wow-delay="0.6s">
+							<div class="MkText">
+								<p class="top">
+									클래스 <span>각각</span> 적용하는 <br>
+									<span> GSAP</span>
+								</p>
+								<p class="bottom pt-3 pt-sm-1">
+									아래 스크립트 참고
+								</p>
+								<a href="#" class="link border-0"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		<!-- E : section -->
+
+		<section class="section section-03">
+			<div class="container section--pin">
+
+				<div class="section-03--1">
+					<div class="TitleBx" data-aos="fade-down">
+						<p class="tit">
+							<span>마케팅 전문가</span>는
+						</p>
+						<p class="tit pt-4">
+							<span>결과</span>로 보여드립니다
+						</p>
+					</div>
+	
+					<ul class="Countbx">
+						<li class="Countbx--list">
+							<div class="inner">
+								<p class="img">
+									<img src="../assets/images/main/count-icn1.png" alt="icn">
+								</p>
+								<div class="Title">
+									<p class="top-tit">
+										<span class="number counterup" data-counterup-time="400">1</span><span class="right-tit">위</span>
+									</p>
+								</div>
+								<p class="bottom-tit">플레이스</p>
+							</div>
+						</li>
+						<li class="Countbx--list">
+							<div class="inner">
+								<p class="img">
+									<img src="../assets/images/main/count-icn2.png" alt="icn">
+								</p>
+								<div class="Title">
+									<p class="top-tit">
+										<span class="number counterup" data-counterup-time="400">175</span><span class="right-tit">건</span>
+									</p>
+								</div>
+								<div class="position-r">
+									<p class="bottom-tit">한달 가맹 문의</p>
+									<p class="date">(23년 1월)</p>
+								</div>
+							</div>
+						</li>
+						<li class="Countbx--list">
+							<div class="inner">
+								<p class="img">
+									<img src="../assets/images/main/count-icn3.png" alt="icn">
+								</p>
+								<div class="Title">
+									<p class="top-tit">
+										<span class="number counterup" data-counterup-time="400">8</span><span class="right-tit">배 상승</span>
+									</p>
+								</div>
+								<p class="bottom-tit">플레이스 유입</p>
+							</div>
+						</li>
+						<li class="Countbx--list">
+							<div class="inner">
+								<p class="img">
+									<img src="../assets/images/main/count-icn4.png" alt="icn">
+								</p>
+								<div class="Title">
+									<p class="top-tit">
+										<span class="number counterup" data-counterup-time="400">1.8</span><span class="right-tit">배 상승</span>
+									</p>
+								</div>
+								<p class="bottom-tit">월 매출</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="section-03--2">
+					<div class="TitleBx p-0" data-aos="fade-up">
+						<p class="tit text-gray-f">
+							에스크플랜과
+						</p>
+						<p class="tit pt-4 text-gray-f">
+							함께한 기업들
+						</p>
+						<p class="sub-tit" data-aos="fade-down">믿고 맡겨주셔서 감사합니다</p>
+					</div>
+					<div class="padding-div"></div>
+					<div class="mt-10 mt-lg-15">
+						<ul id="scroller" class="simply-scroll-list">
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo1.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo2.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo3.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo4.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo5.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo6.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="mt-10 mt-lg-15">
+						<ul id="scroller2" class="simply-scroll-list ">
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo7.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo8.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo9.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo10.png" alt="">
+								</div>
+							</li>
+							<li>
+								<div class="box">
+									<img src="../assets/images/main/icn-logo11.png" alt="">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
 
 
-		</script>
-	</body>
+
+
+			<!-- 동그라미 -->
+			<div class="circle-bx">
+				<div class="circle"></div>
+			</div>
+		</section>
+		<!-- E : section -->
+
+	
+	</main>
+
+	<? include "../include/footer.html" ?>
+	<? include "../include/js.html" ?>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+	<script>
+
+
+
+/* GSAP 시작 */
+gsap.registerPlugin(ScrollTrigger);
+
+
+/* 오른쪽에서 시작 */
+const section01 = gsap.from('.section-01', {
+  x: '100%', // 오른쪽에서 시작
+  opacity: 0, // 초기에 숨김
+  duration: 1, // 애니메이션 지속 시간
+  ease: 'power4.out', // 이징 함수
+});
+// ScrollTrigger 설정
+ScrollTrigger.create({
+  trigger: '.section-01', // 애니메이션을 트리거하는 요소
+  start: 'top 100%', // 트리거가 화면의 100%에 도달하면 애니메이션 시작
+  animation: section01, // 재생할 애니메이션
+  scrub: true, // 스크롤 위치에 따라 애니메이션 조정
+});
+
+
+/* 왼쪽에서 시작 */
+const section02 = gsap.from('.CardWrap', {
+  x: '-100%', // 왼쪽에서 시작
+  opacity: 0, // 초기에 숨김
+  duration: 1, // 애니메이션 지속 시간
+  ease: 'power4.out', // 이징 함수
+});
+// ScrollTrigger 설정
+ScrollTrigger.create({
+  trigger: '.CardWrap', // 애니메이션을 트리거하는 요소
+  start: 'top 100%', // 트리거가 화면의 100%에 도달하면 애니메이션 시작
+  animation: section02, // 재생할 애니메이션
+  scrub: true, // 스크롤 위치에 따라 애니메이션 조정
+});
+
+gsap.timeline({  
+  scrollTrigger: {
+    trigger: ".section--pin", // 객체기준범위
+    pin: true, // 고정
+    start: "top top", // 시작점
+    end: "bottom bottom", // 끝점
+    scrub: 1, // 모션바운스
+		duration: 1,
+  }
+})
+.to('.section-03--1', {duration: 1, opacity: 0, y: -600})
+
+.to('.section-03--2', {duration: 1, opacity: 0, y: 0}) 
+.to('.section-03--2', {duration: 1, opacity: 1, y: -600}) 
+
+/* 아래에서 위로 떠오르게 */
+
+// 같은 클래스 각각 each 적용
+ScrollTrigger.batch('.category-bx .cate', {
+  onEnter: batch => {
+    gsap.from(batch, {
+      y: '100%',
+      opacity: 0,
+      duration: 1,
+      ease: 'power4.out',
+    });
+  },
+  scrub: true,
+});
+
+
+
+
+
+
+$(function () {
+	$("#scroller").simplyScroll({
+		direction: 'backwards',
+		frameRate: 60,
+		pauseOnHover: false,
+	});
+
+	$("#scroller2").simplyScroll({
+		direction: 'forwards',
+		frameRate: 60,
+		pauseOnHover: false,
+	});
+});
+
+	</script>
+</body>
+
 </html>

@@ -1,0 +1,29 @@
+svg text { 
+  font-size: 6rem; 
+  stroke-width: 3px; 
+  stroke: #333;
+  font-weight: 700;
+  fill: transparent;
+  stroke-dashoffset: 750; 
+  stroke-dasharray: 750; 
+  animation: stroke 1.5s linear;
+  animation-fill-mode: forwards;
+}
+$total: 8;
+@for $i from 1 through $total {
+  text:nth-child(#{$i}) {
+    animation-delay: $i - 1 + s;
+  }
+}
+@keyframes stroke { 
+  0% { 
+    stroke-dashoffset: 750; 
+  } 
+  70% {
+    fill: #dddd;
+  }
+  100% { 
+    stroke-dashoffset: 0; 
+    fill: #eee;
+  } 
+}

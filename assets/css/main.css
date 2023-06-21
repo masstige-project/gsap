@@ -40,7 +40,7 @@
   top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #192551;
+  color: #6610f2;
   text-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   line-height: 1.1;
   font-weight: bold;
@@ -112,7 +112,7 @@
   transition: 300ms color;
 }
 .main-visual .swiper-button:hover {
-  color: #192551;
+  color: #6610f2;
 }
 .main-visual .swiper-button--prev {
   left: 50%;
@@ -183,7 +183,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #192551;
+  background-color: #6610f2;
 }
 .main-visual .swiper-control.swiper-control--progress .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   animation: progress 3s linear 0s 1;
@@ -279,7 +279,7 @@
   }
 }
 .scrollWrap .inner .box--top {
-  background: #192551;
+  background: #6610f2;
   color: #fff;
   font-size: 0.875rem;
   font-weight: 500;
@@ -319,7 +319,7 @@
 .scrollWrap .inner .box--bottom .mousey {
   width: 1.4375rem;
   height: 2rem;
-  background: #192551;
+  background: #6610f2;
   border-radius: 25px;
   box-sizing: content-box;
 }
@@ -349,7 +349,7 @@
 }
 
 .section-01 {
-  background: #192551;
+  background: #6610f2;
 }
 .section-01 .titlebx {
   text-align: center;
@@ -594,7 +594,7 @@
 .section-02 .CardWrap .inner--left .box {
   width: 24rem;
   height: 24rem;
-  background: #192551;
+  background: #6610f2;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -679,13 +679,13 @@
   }
 }
 .section-02 .CardWrap .inner--right .cardbx--list:hover .link {
-  background: #192551;
+  background: #6610f2;
 }
 .section-02 .CardWrap .inner--right .cardbx--list:hover .link .box .Tit {
   color: #fff;
 }
 .section-02 .CardWrap .inner--right .cardbx--list:hover .link .img-bx {
-  border-color: #192551;
+  border-color: #6610f2;
 }
 .section-02 .CardWrap .inner--right .cardbx--list:hover .link .img-bx img {
   animation: flip 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate both;
@@ -774,7 +774,7 @@
   transform: translate(50%, -50%);
   font-size: 2rem;
   font-weight: bold;
-  color: #192551;
+  color: #6610f2;
   letter-spacing: -0.64px;
 }
 @media all and (max-width: 1400px) {
@@ -972,7 +972,7 @@
 .section-02 .MkText .top > span {
   font-size: 5.125rem;
   font-weight: bold;
-  color: #192551;
+  color: #6610f2;
 }
 .section-02 .MkText .bottom {
   font-size: 1.625rem;
@@ -983,14 +983,14 @@
 }
 .section-02 .MkText .link {
   display: inline-block;
-  border: 2px solid #192551;
+  border: 2px solid #6610f2;
   font-size: 1.1875rem;
   font-weight: 600;
   font-family: "SUIT";
   letter-spacing: -0.38px;
   margin-top: 4.375rem;
   padding: 0.625rem 1.875rem;
-  color: #192551;
+  color: #6610f2;
 }
 @media all and (max-width: 1400px) {
   .section-02 .MKText .top {
@@ -1102,7 +1102,7 @@
 }
 
 .section-03 {
-  background: #192551;
+  background: #6610f2;
   padding: 17.5rem 0;
   padding-top: 9.375rem;
   position: relative;
@@ -1129,7 +1129,7 @@
 }
 .section-03 .TitleBx .sub-tit {
   font-size: 2.5rem;
-  color: #868ca2;
+  color: #9086a2;
   letter-spacing: -0.77px;
   line-height: 1;
   padding-top: 1.25rem;
@@ -1188,7 +1188,7 @@
 .section-03 .Countbx--list:nth-child(3) .inner .top-tit .right-tit {
   font-size: 2.8125rem;
   letter-spacing: -0.87px;
-  color: #868ca2;
+  color: #9086a2;
 }
 @media all and (max-width: 1024px) {
   .section-03 .Countbx--list:nth-child(3) .inner .top-tit {
@@ -1205,7 +1205,7 @@
 }
 .section-03 .Countbx--list .inner {
   position: relative;
-  color: #868ca2;
+  color: #9086a2;
   text-align: center;
   z-index: 1;
   line-height: 1;
@@ -1351,7 +1351,7 @@
 .section-03 .circle-bx .circle {
   width: 8.625rem;
   height: 8.625rem;
-  background: #192551;
+  background: #6610f2;
   border-radius: 50%;
 }
 @media all and (max-width: 1024px) {

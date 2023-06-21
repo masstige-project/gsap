@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="../assets/css/main.min.css" />
 	</head>
 
-	<body class="main-body" style="overflow-x: hidden;">
+	<body class="main-body" style="overflow-x: hidden">
 		<? include "../include/header.html" ?>
 
 		<main class="main" id="contents">
@@ -18,6 +18,10 @@
 				<h1 class="sr-only">메인비주얼 영역</h1>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
+						<!-- 
+              pc: 1920x840
+              m: 1440x2576 
+            -->
 						<div class="swiper-slide item">
 							<a href="#" class="link">
 								<div class="img-bx">
@@ -35,6 +39,7 @@
 					</div>
 				</div>
 
+				<!-- S : scroll -->
 				<div class="scrollWrap">
 					<div class="inner">
 						<div class="box box--top">SCROLL DOWN</div>
@@ -47,6 +52,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- E : scroll -->
 			</section>
 			<!-- E : main-visual -->
 
@@ -168,7 +174,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="Mktbx--right">
+							<div class="Mktbx--right wow fadeInRight" data-wow-delay="0.6s">
 								<div class="MkText">
 									<p class="top">
 										클래스 <span>각각</span> 적용하는 <br />
@@ -186,73 +192,30 @@
 
 			<section class="section section-03">
 				<div class="container section--pin">
-					<div class="section-03--1">
-						<div class="TitleBx pt-30">
-							<p class="tit"><span>Pin 옵션 사용</span>한</p>
-							<p class="tit pt-4">스크롤 애니메이션</p>
+					<div class="section-03--1" style="height: 100vh;">
+						<div class="TitleBx">
+							<p class="tit">아래에서 <span>하나씩 올라오는</span></p>
+							<p class="tit pt-4"><span>스크롤</span> 애니메이션</p>
 						</div>
-
-						<ul class="Countbx">
-							<li class="Countbx--list">
-								<div class="inner">
-									<p class="img">
-										<img src="../assets/images/main/count-icn1.png" alt="icn" />
-									</p>
-									<div class="Title">
-										<p class="top-tit"><span class="number counterup" data-counterup-time="400">1</span><span class="right-tit">위</span></p>
-									</div>
-									<p class="bottom-tit">Animation</p>
-								</div>
-							</li>
-							<li class="Countbx--list">
-								<div class="inner">
-									<p class="img">
-										<img src="../assets/images/main/count-icn2.png" alt="icn" />
-									</p>
-									<div class="Title">
-										<p class="top-tit"><span class="number counterup" data-counterup-time="400">1</span><span class="right-tit">위</span></p>
-									</div>
-									<div class="position-r">
-										<p class="bottom-tit">Animation</p>
-									</div>
-								</div>
-							</li>
-							<li class="Countbx--list">
-								<div class="inner">
-									<p class="img">
-										<img src="../assets/images/main/count-icn3.png" alt="icn" />
-									</p>
-									<div class="Title">
-										<p class="top-tit"><span class="number counterup" data-counterup-time="400">1</span><span class="right-tit">위</span></p>
-									</div>
-									<p class="bottom-tit">Animation</p>
-								</div>
-							</li>
-							<li class="Countbx--list">
-								<div class="inner">
-									<p class="img">
-										<img src="../assets/images/main/count-icn4.png" alt="icn" />
-									</p>
-									<div class="Title">
-										<p class="top-tit"><span class="number counterup" data-counterup-time="400">1</span><span class="right-tit">위</span></p>
-									</div>
-									<p class="bottom-tit">Animation</p>
-								</div>
-							</li>
-						</ul>
+            <div class="py-30">
+              <div class="TitleBx p-0">
+                <p class="tit text-gray-f">첫번째로 올라오는 섹션입니다.</p>
+                <img src="../assets/images/main/logo.png" alt="" style="display: block; margin: 0 auto;">
+              </div>
+            </div>
 					</div>
-
-				</div>
-
-			</section>
-			<!-- E : section -->
-
-			<!-- S : section -->
-			<section class="section section-04">
-				<div class="container">
-					<div class="TitleBx pt-30">
-						<p class="tit"><span>Pin 옵션 사용</span>한</p>
-						<p class="tit pt-4">스크롤 애니메이션</p>
+					<div class="section-03--2" style="height: 100vh;">
+						<div class="TitleBx p-0">
+							<p class="tit text-gray-f">올라오는</p>
+							<p class="tit pt-4 text-gray-f">두번째 섹션</p>
+							<p class="sub-tit">안녕하세요</p>
+						</div>
+						<div class="py-30">
+              <div class="TitleBx p-0">
+                <p class="tit text-gray-f">두번째로 올라오는 섹션입니다.</p>
+                <img src="../assets/images/main/logo.png" alt="" style="display: block; margin: 0 auto;">
+              </div>
+            </div>
 					</div>
 				</div>
 			</section>
@@ -298,31 +261,6 @@
 				scrub: true, // 스크롤 위치에 따라 애니메이션 조정
 			});
 
-			/* pin 고정 */
-			const boxWrap = document.querySelector('.Countbx');
-			let boxWrapWidth = boxWrap.scrollHeight;
-
-			const tl = gsap.timeline();
-
-			tl.to(boxWrap, {
-				yPercent: -100,
-				scrollTrigger: {
-					trigger: '.section-03', // 객체기준범위
-					pin: true, // 고정
-					start: 'top top', // 시작점
-					end: () => `+=${boxWrapWidth * 2}`, // 끝점
-					scrub: 1, // 모션바운스
-					duration: 1,
-				},
-			});
-			// .to('.Countbx', { duration: 1, opacity: 0, y: -600 })
-			tl.to('.Countbx--list:nth-of-type(1)', { duration: 1, opacity: 1, y: -300 });
-			tl.to('.Countbx--list:nth-of-type(2)', { duration: 1, opacity: 1, y: -300 });
-			tl.to('.Countbx--list:nth-of-type(3)', { duration: 1, opacity: 1, y: -300 });
-			tl.to('.Countbx--list:nth-of-type(4)', { duration: 1, opacity: 1, y: -300 });
-			// .to('.section-03--2', { duration: 1, opacity: 0, y: 0 })
-			// .to('.section-03--2', { duration: 1, opacity: 1, y: -600 });			
-
 
 			/* 아래에서 위로 떠오르게 */
 			// 같은 클래스 각각 each 적용
@@ -338,7 +276,8 @@
 				scrub: true,
 			});
 
-			
+
+
 
 		</script>
 	</body>

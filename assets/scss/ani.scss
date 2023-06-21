@@ -1,7 +1,7 @@
 svg text { 
   font-size: 6rem; 
   stroke-width: 3px; 
-  stroke: #333;
+  stroke: #6610f2;
   font-weight: 700;
   fill: transparent;
   stroke-dashoffset: 750; 
@@ -20,10 +20,10 @@ $total: 8;
     stroke-dashoffset: 750; 
   } 
   70% {
-    fill: #dddd;
+    fill: #eee;
   }
   100% { 
     stroke-dashoffset: 0; 
-    fill: #eee;
+    fill: #ddd;
   } 
 }

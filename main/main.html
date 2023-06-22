@@ -20,18 +20,30 @@
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide item">
-							<a href="#" class="link">
+							<div class="link">
 								<div class="img-bx">
 									<img class="d-none d-md-block" src="../assets/images/main/visual1.jpg" alt="img" />
 									<img class="d-block d-md-none" src="../assets/images/main/visual1-m.jpg" alt="img" />
 								</div>
 								<div class="txt-bx">
 									<div class="container">
-										<h2 class="title d-block" style="opacity: 1">GSAP용 공유</h2>
-										<p class="text d-block" style="opacity: 1">GSAP 및 애니메이션 공유용 템플릿입니다.</p>
+										<h5>
+											<svg width=600 height=200 viewBox="0 0 600 200" class="writing"> 
+												<text x="0" y="65%">M</text> 
+												<text x="100" y="60%">A</text>
+												<text x="170" y="60%">S</text>
+												<text x="230" y="70%">S</text>
+												<text x="290" y="65%">T</text>
+												<text x="370" y="70%">I</text>
+												<text x="390" y="66%">G</text>
+												<text x="480" y="60%">E</text>
+											</svg>
+										</h5>
+										<h2 class="title d-block" style="opacity: 1">애니메이션 효과 공유</h2>
+										<p class="text d-block" style="opacity: 1">퍼블팀 GSAP 및 기타 애니메이션 공유용 템플릿입니다.</p>
 									</div>
 								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -57,33 +69,13 @@
 				<div class="container">
 					<div class="titlebx">
 						<p class="text pb-5">오른쪽에서 왼쪽으로 나오는 GSAP입니다.</p>
-						<p class="text">.section-01 클래스 사용</p>
 					</div>
 
 					<div class="icnWrap">
 						<div class="FlxWrap">
-							<ul class="icnbx wowrap">
-								<li class="icnbx--list pb-com wow fadeInLeft">
-									<div class="inner">
-										<img src="../assets/images/main/section1-icon1.png" alt="icn" />
-									</div>
-								</li>
-								<li class="icnbx--list pb-com wow fadeInLeft">
-									<div class="inner">
-										<img src="../assets/images/main/section1-icon2.png" alt="icn" />
-									</div>
-								</li>
-								<li class="icnbx--list wow fadeInLeft">
-									<div class="inner">
-										<img src="../assets/images/main/section1-icon3.png" alt="icn" />
-									</div>
-								</li>
-								<li class="icnbx--list pb-com wow fadeInLeft">
-									<div class="inner">
-										<img src="../assets/images/main/section1-icon4.png" alt="icn" />
-									</div>
-								</li>
-							</ul>
+							<div class="d-flex align-items-center justify-content-center">
+								<img src="../assets/images/main/footer-logo.png" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -249,10 +241,10 @@
 			<!-- E : section -->
 
 			<!-- S : section -->
-			<section class="section section-04">
+			<section class="section section-04" style="background-color: #3a078dba;">
 				<div class="container">
-					<div class="TitleBx text-center pt-30" style="font-size: 4rem;">
-						<p class="tit"><span>날라오는</span>듯한</p>
+					<div class="TitleBx text-center pt-30 font-weight-bold">
+						<p class="tit"><span>날라오는</span></p>
 						<p class="tit pt-4">스크롤 애니메이션</p>
 					</div>
 					<div class="position-relative" style="height: 900px;">
@@ -265,34 +257,17 @@
 			<!-- S : 이미지 그려지는 효과 -->
 			<section class="section section-05">
 				<div class="container">
-					<div class="TitleBx text-center py-30" style="font-size: 4rem;">
-						<p class="tit"><span>이미지가 그려지는</span>듯한</p>
+					<div class="TitleBx text-center pt-30 pb-5 font-weight-bold">
+						<p class="tit"><span style="color: #6610f2;">이미지가 그려지는</span></p>
 						<p class="tit pt-4">스크롤 애니메이션</p>
 					</div>
-					<svg class="svg-animation" width="400" height="400">
-						<!-- SVG 레이어 -->
-						<path id="layer" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" d="M100,200 C100,100 300,100 300,200 C300,300 100,300 100,200"/>
-					</svg>
-					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-					width="170.000000pt" height="269.000000pt" viewBox="0 0 170.000000 269.000000"
-					preserveAspectRatio="xMidYMid meet">
-
-					<g transform="translate(0.000000,269.000000) scale(0.100000,-0.100000)"
-					fill="#000000" stroke="none">
-					</g>
-					</svg>
-
-
-					<svg width=600 height=200 viewBox="0 0 600 200"> 
-						<text x="40" y="65%">M</text> 
-						<text x="110" y="60%">A</text>
-						<text x="150" y="60%">S</text>
-						<text x="190" y="70%">S</text>
-						<text x="230" y="65%">T</text>
-						<text x="290" y="70%">I</text>
-						<text x="300" y="66%">G</text>
-						<text x="380" y="60%">E</text>
-					</svg>
+					<div class="d-flex align-items-center justify-content-center pb-30">
+						<svg class="svg-animation" width="1000" height="800" viewBox="0 0 1000 800">
+							<!-- SVG 레이어 -->
+							<path id="layer" fill="none" stroke="#6610f2" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" d="M10 480 C 240 10, 365 10, 405 180 S 550 550, 980 480" />
+						</svg>
+						<div class="pb-30"></div>
+					</div>
 				</div>
 			</section>
 			<!-- E : 이미지 그려지는 효과 -->
@@ -309,7 +284,7 @@
 
 			/* 오른쪽에서 시작 */
 			const section01 = gsap.from('.section-01', {
-				x: '100%', // 오른쪽에서 시작
+				x: '150%', // 오른쪽에서 시작
 				opacity: 0, // 초기에 숨김
 				duration: 1, // 애니메이션 지속 시간
 				ease: 'power4.out', // 이징 함수
@@ -382,7 +357,7 @@
 			const rocket = document.querySelector(".section-04 .rocket");
 			// ScrollTrigger 설정
 			gsap.to(rocket, {
-				x: "-100%",
+				x: "-150%",
 				y: "0%",
 				opacity: 1,
 				duration: 1,
@@ -408,9 +383,10 @@
 					duration: 2,
 					ease: "power2.out",
 					scrollTrigger: {
-							trigger: ".svg-animation",
-							start: "top bottom",
-							end: "bottom top",
+							trigger: ".section-05",
+							pin: true,
+							start: "top top",
+							end: "bottom 20%",
 							scrub: true
 					}
 			});

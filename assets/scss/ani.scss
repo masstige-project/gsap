@@ -8,6 +8,9 @@
   stroke-dasharray: 750; 
   animation: stroke 1.5s linear;
   animation-fill-mode: forwards;
+  @media screen and (max-width: 1024px) {
+    font-size: 5rem;
+  }
 }
 $total: 8;
 @for $i from 1 through $total {

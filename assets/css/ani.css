@@ -9,6 +9,11 @@
   animation: stroke 1.5s linear;
   animation-fill-mode: forwards;
 }
+@media screen and (max-width: 1024px) {
+  .writing text {
+    font-size: 5rem;
+  }
+}
 
 text:nth-child(1) {
   animation-delay: 0s;
